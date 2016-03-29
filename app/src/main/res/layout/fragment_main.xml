@@ -57,7 +57,11 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ffffffff"
                 android:textIsSelectable="true" />
-
+<!--
+Section for the metawear connected and image below.
+  connection_status is in mainactivity.java
+  dont know where meta_wear_title is from
+-->
             <TextView
                 android:id="@+id/connection_status"
                 android:layout_width="wrap_content"
@@ -70,6 +74,8 @@
                 android:text="@string/no_metawear_connected"
                 android:textColor="#ffffffff" />
 
+ <!-- this is the demo switch probably not needed.  CAN BE COMMENTED OUT -->
+ <!--
             <Switch
                 android:id="@+id/demo"
                 android:layout_width="wrap_content"
@@ -82,7 +88,44 @@
                 android:text="@string/demo"
                 android:textColor="#ffffffff"
                 android:textStyle="italic" />
+-->
+<!--  my moving of the temp fields -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".02"
+                android:orientation="vertical">
+                <View
+                    android:id="@+id/bottom_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/samples"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#ffffffff" />
+            </LinearLayout>
 
+            <TextView
+                android:id="@+id/temperature"
+                android:layout_width="match_parent"
+                android:layout_weight=".14"
+                android:layout_height="0dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="sans-serif-bold"
+                android:gravity="center_horizontal"
+                android:password="false"
+                android:text=""
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+                android:textColor="#ffffffff"
+                android:textSize="24pt"
+                android:textStyle="bold" />
+ <!-- end of my moving the temp fields -->
+<!-- download_progress is in mainactivity -->
+<!--
             <ProgressBar
                 android:id="@+id/download_progress"
                 style="?android:attr/progressBarStyleHorizontal"
@@ -132,7 +175,7 @@
                 android:textAlignment="center"
                 android:textColor="#ffffffff"
                 android:textStyle="normal" />
-
+-->
         </RelativeLayout>
 
         <fragment
@@ -157,7 +200,7 @@
             android:text=""
             android:textColor="#ffffffff"
             android:textStyle="normal" />
-
+<!--  the line and temp
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -191,7 +234,7 @@
             android:textColor="#ffffffff"
             android:textSize="24pt"
             android:textStyle="bold" />
-
+-->
     </LinearLayout>
 
 
