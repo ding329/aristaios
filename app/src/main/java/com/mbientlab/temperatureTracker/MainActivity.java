@@ -245,11 +245,12 @@ public class MainActivity extends ActionBarActivity implements ServiceConnection
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        Switch demoSwitch = (Switch) findViewById(R.id.demo);
+ /*       Switch demoSwitch = (Switch) findViewById(R.id.demo);
         if(demoSwitch.isChecked()){
             Toast.makeText(getApplicationContext(), R.string.toast_in_demo_mode, Toast.LENGTH_SHORT).show();
         }else {
             //noinspection SimplifiableIfStatement
+  */
             switch (id) {
                 case R.id.action_connect:
                     if (mwBoard != null) {
@@ -340,7 +341,7 @@ public class MainActivity extends ActionBarActivity implements ServiceConnection
                     Log.i("Menu Item", String.valueOf(id));
                     Log.i("Menu Item", menu.findItem(id).getTitle().toString());
             }
-        }
+      //  }
         return super.onOptionsItemSelected(item);
     }
 
@@ -412,14 +413,14 @@ public class MainActivity extends ActionBarActivity implements ServiceConnection
 
     @Override
     public void totalDownloadEntries(int entries) {
-        ProgressBar progressBar = (ProgressBar) findViewById(R.id.download_progress);
-        progressBar.setMax(entries);
+  //      ProgressBar progressBar = (ProgressBar) findViewById(R.id.download_progress);
+    //    progressBar.setMax(entries);
     }
 
     @Override
     public void downloadProgress(int entriesDownloaded) {
-        ProgressBar progressBar = (ProgressBar) findViewById(R.id.download_progress);
-        progressBar.setProgress(entriesDownloaded);
+   //     ProgressBar progressBar = (ProgressBar) findViewById(R.id.download_progress);
+    //    progressBar.setProgress(entriesDownloaded);
     }
 
     @Override
@@ -430,8 +431,8 @@ public class MainActivity extends ActionBarActivity implements ServiceConnection
             public void run() {
                 TextView connectionStatus = (TextView) findViewById(R.id.connection_status);
                 connectionStatus.setText(getText(R.string.metawear_connected));
-                ProgressBar progressBar = (ProgressBar) findViewById(R.id.download_progress);
-                progressBar.setProgress(0);
+         //       ProgressBar progressBar = (ProgressBar) findViewById(R.id.download_progress);
+           //     progressBar.setProgress(0);
             }
         });
     }

@@ -33,7 +33,7 @@
             android:focusableInTouchMode="false"
             android:orientation="horizontal">
 
-            <ImageView
+  <!--          <ImageView
                 android:id="@+id/mw_board_icon"
                 android:layout_width="64dp"
                 android:layout_height="80dp"
@@ -41,7 +41,7 @@
                 android:focusableInTouchMode="false"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:src="@drawable/board" />
-
+-->
 
             <TextView
                 android:id="@+id/meta_wear_title"
@@ -50,7 +50,6 @@
                 android:layout_alignParentBottom="false"
                 android:layout_alignParentStart="false"
                 android:layout_alignParentTop="false"
-                android:layout_toEndOf="@id/mw_board_icon"
                 android:paddingLeft="9dp"
                 android:paddingTop="14dp"
                 android:text="@string/metawear"
@@ -73,23 +72,8 @@ Section for the metawear connected and image below.
                 android:paddingTop="2dp"
                 android:text="@string/no_metawear_connected"
                 android:textColor="#ffffffff" />
-
- <!-- this is the demo switch probably not needed.  CAN BE COMMENTED OUT -->
- <!--
-            <Switch
-                android:id="@+id/demo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:checked="false"
-                android:fontFamily="sans-serif-thin"
-                android:paddingRight="0dp"
-                android:paddingTop="16dp"
-                android:text="@string/demo"
-                android:textColor="#ffffffff"
-                android:textStyle="italic" />
--->
-<!--  my moving of the temp fields -->
+        </RelativeLayout>
+<!--  my moving of the temp fields   was vertical -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -123,60 +107,10 @@ Section for the metawear connected and image below.
                 android:textColor="#ffffffff"
                 android:textSize="24pt"
                 android:textStyle="bold" />
+
  <!-- end of my moving the temp fields -->
-<!-- download_progress is in mainactivity -->
-<!--
-            <ProgressBar
-                android:id="@+id/download_progress"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:paddingTop="10dp" />
 
-            <TextView
-                android:id="@+id/temperature_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/download_progress"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:fontFamily="sans-serif-bold"
-                android:gravity="center_horizontal"
-                android:password="false"
-                android:text="@string/temperature"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                android:textColor="#ffffffff"
-                android:textStyle="bold" />
-
-            <View
-                android:id="@+id/line"
-                android:layout_width="300dp"
-                android:layout_height="0.5dp"
-                android:layout_below="@+id/temperature_title"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#686868" />
-
-            <TextView
-                android:id="@+id/active_calories_burned"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/line"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center_horizontal"
-                android:password="false"
-                android:text="@string/active_calories_burned"
-                android:textAlignment="center"
-                android:textColor="#ffffffff"
-                android:textStyle="normal" />
--->
-        </RelativeLayout>
+  <!--      </RelativeLayout>   -->
 
         <fragment
             android:id="@+id/graph"
@@ -200,7 +134,8 @@ Section for the metawear connected and image below.
             android:text=""
             android:textColor="#ffffffff"
             android:textStyle="normal" />
-<!--  the line and temp
+<!--  the line and temp -->
+<!--
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"

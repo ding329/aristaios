@@ -76,7 +76,7 @@ public class MainFragment extends Fragment implements ServiceConnection, OnChart
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
 
-        Switch demoSwitch = (Switch) rootView.findViewById(R.id.demo);
+  /*      Switch demoSwitch = (Switch) rootView.findViewById(R.id.demo);
         demoSwitch.setOnCheckedChangeListener(new Switch.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton b, boolean isChecked) {
@@ -88,6 +88,7 @@ public class MainFragment extends Fragment implements ServiceConnection, OnChart
                 graphFragment.toggleDemoData(isChecked);
             }
         });
+ */
         GraphFragment graphFragment = getGraphFragment();
         graphFragment.getmChart().setOnChartValueSelectedListener(this);
         return rootView;
